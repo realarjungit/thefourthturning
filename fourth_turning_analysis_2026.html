@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fourth Turning Analysis: May 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: #f4efe4;
+    color: #2a2218;
+    line-height: 1.85;
+    font-size: 17px;
+  }
+
+  /* HEADER */
+  header {
+    background: #2a2218;
+    padding: 68px 40px 60px;
+    text-align: center;
+  }
+
+  header .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    color: #c8922a;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    color: #f4efe4;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: #d4a44a;
+  }
+
+  header .subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #8a8070;
+    margin-bottom: 34px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+  }
+
+  .phase-badge {
+    display: inline-block;
+    background: #c8922a;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 9px 26px;
+    border-radius: 30px;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 16px 32px 100px;
+  }
+
+  /* SECTIONS */
+  section {
+    margin-top: 68px;
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  section:nth-child(1) { animation-delay: 0.08s; }
+  section:nth-child(2) { animation-delay: 0.16s; }
+  section:nth-child(3) { animation-delay: 0.24s; }
+  section:nth-child(4) { animation-delay: 0.30s; }
+  section:nth-child(5) { animation-delay: 0.36s; }
+  section:nth-child(6) { animation-delay: 0.42s; }
+  section:nth-child(7) { animation-delay: 0.48s; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SECTION LABELS */
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: #c8922a;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* HEADINGS */
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #1a1208;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #d8cdb8;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1208;
+    margin-bottom: 10px;
+    margin-top: 22px;
+    line-height: 1.3;
+  }
+
+  /* BODY TEXT */
+  p {
+    font-size: 1rem;
+    color: #3a3020;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #1a1208;
+  }
+
+  /* ACCENT LINE */
+  .accent-line {
+    width: 44px;
+    height: 3px;
+    background: #c8922a;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  /* CONFIDENCE BAR */
+  .confidence-wrap {
+    background: #ede7d8;
+    border: 1px solid #cfc5b0;
+    border-radius: 8px;
+    padding: 22px 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .bar-track {
+    flex: 1;
+    height: 10px;
+    background: #c8bea8;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(90deg, #a06818, #d4a44a);
+    border-radius: 10px;
+  }
+
+  .bar-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #7a4e10;
+    white-space: nowrap;
+  }
+
+  /* HYPOTHESIS CARDS */
+  .hypothesis {
+    background: #fff;
+    border: 1px solid #d8cdb8;
+    border-top: 4px solid #c8922a;
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-top: 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+
+  .hypothesis.b {
+    border-top-color: #4a7a5a;
+  }
+
+  .verdict {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+
+  .verdict.primary  { background: #fdf0da; color: #7a4e10; border: 1px solid #e8c07a; }
+  .verdict.secondary { background: #e8f5ed; color: #2a6040; border: 1px solid #88c0a0; }
+
+  /* LISTS */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  li {
+    font-size: 0.97rem;
+    color: #3a3020;
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid #e8e0d0;
+    position: relative;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  li:last-child { border-bottom: none; }
+
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 10px;
+    height: 2px;
+    background: #c8922a;
+    border-radius: 2px;
+  }
+
+  /* SIGNAL GRID */
+  .signal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  @media (max-width: 640px) {
+    .signal-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 2.1rem; }
+    .container { padding: 16px 18px 80px; }
+  }
+
+  .signal-card {
+    background: #fff;
+    border: 1px solid #d8cdb8;
+    border-radius: 8px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .signal-card .card-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #7a4e10;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e0d0;
+  }
+
+  .signal-card li { font-size: 0.92rem; }
+  .signal-card li::before { background: #c8a850; }
+
+  /* INTERPRETATION BOX */
+  .interpretation-box {
+    background: #fff;
+    border: 1px solid #d8cdb8;
+    border-left: 5px solid #2a2218;
+    border-radius: 8px;
+    padding: 32px 36px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  /* WATCH LIST */
+  .watch-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: none;
+    border: 2px solid #c8922a;
+    border-radius: 50%;
+    top: 15px;
+  }
+
+  /* SOURCES */
+  .sources-list li {
+    padding: 8px 0 8px 22px;
+    border-bottom: none;
+  }
+
+  a {
+    color: #7a4e10;
+    text-decoration: none;
+    border-bottom: 1px solid #c8a850;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  a:hover { color: #1a1208; border-color: #1a1208; }
+
+  /* FOOTER */
+  .date-stamp {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    color: #9a8f7a;
+    text-align: right;
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #d8cdb8;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Strategic Analysis &nbsp;/&nbsp; Fourth Turning Framework</div>
+  <h1>The World in the<br><em>Shadow of War</em></h1>
+  <p class="subtitle">A structured assessment of current global conditions through the lens of generational crisis theory</p>
+  <div class="phase-badge">May 2026</div>
+</header>
+
+<div class="container">
+
+  <section>
+    <div class="section-label">01 / Current Phase Estimate</div>
+    <h2>An Active Crisis Era</h2>
+    <div class="accent-line"></div>
+    <p>Based on converging signals across economics, politics, social cohesion, and geopolitics, the world appears to be in an active Fourth Turning. The cluster of crises now unfolding is consistent with what Strauss and Howe described as a Crisis era: a period in which existing institutions are severely tested, old orders fracture, and societies face defining choices.</p>
+    <p>This is not a late Unraveling. The signals have crossed a threshold. Multiple simultaneous shocks are no longer isolated. They are reinforcing each other. That is the key marker of a genuine Crisis turning.</p>
+  </section>
+
+  <section>
+    <div class="section-label">02 / Confidence Level</div>
+    <h2>Moderate-High Confidence</h2>
+    <div class="accent-line"></div>
+    <div class="confidence-wrap">
+      <div class="bar-track"><div class="bar-fill"></div></div>
+      <div class="bar-label">65% Confidence</div>
+    </div>
+    <p>The signals are strong and numerous, but some stabilizing forces remain active. The full severity of the Crisis is not yet locked in. The outcome of ongoing conflicts, the resilience of democratic institutions, and the trajectory of debt markets will each matter significantly over the next 12 to 24 months.</p>
+  </section>
+
+  <section>
+    <div class="section-label">03 / Competing Interpretations</div>
+    <h2>Two Hypotheses</h2>
+    <div class="accent-line"></div>
+
+    <div class="hypothesis">
+      <div class="verdict primary">Hypothesis A &mdash; Active Fourth Turning (Crisis Era)</div>
+      <h3>The crossing point has arrived</h3>
+      <p>Multiple reinforcing crises, all arriving together, mark a fundamental break from the unraveling phase.</p>
+      <ul>
+        <li>Simultaneous active wars in Ukraine, the Middle East involving the United States and Iran, Sudan, and Congo represent a scale of concurrent conflict not seen in decades</li>
+        <li>Public trust in governments, media, and institutions has reached historically low levels globally, with the 2026 Edelman Trust Barometer describing a descent into insularity and a breakdown of shared reality</li>
+        <li>Fiscal buffers are depleted across major economies; public debt is at historically high levels with limited room to respond to new shocks, as the IMF April 2026 outlook warns</li>
+        <li>The global order itself is fragmenting, with the shift from US-led unipolarity to a contested multipolar system accelerating sharply</li>
+        <li>Energy markets have been disrupted at a structural level by the closure of the Strait of Hormuz and the merging of the Ukraine and Middle East conflicts into one interconnected crisis</li>
+      </ul>
+      <p style="margin-top: 16px;"><strong>Contradictions:</strong> Core financial systems have not collapsed. Major democratic elections continue to function. Some economic regions show resilience. The conflict has not yet triggered a direct NATO-Russia or US-China confrontation.</p>
+    </div>
+
+    <div class="hypothesis b">
+      <div class="verdict secondary">Hypothesis B &mdash; Late Third Turning (Unraveling Still)</div>
+      <h3>Severe stress, not yet a full Crisis break</h3>
+      <p>The current period may represent an extreme Unraveling rather than a confirmed Crisis transition.</p>
+      <ul>
+        <li>Financial markets have not fully broken; central banks still retain credibility in most major economies</li>
+        <li>Multilateral institutions, though weakened, continue to function; the IMF, World Bank, and UN are still operational</li>
+        <li>Inflation, while elevated, has not spiraled into hyperinflationary breakdown in advanced economies</li>
+        <li>Some conflicts have been partially contained; ceasefires and diplomatic efforts remain active in multiple theaters</li>
+      </ul>
+      <p style="margin-top: 16px;"><strong>Contradictions:</strong> The convergence of so many simultaneous breakdowns makes a pure Unraveling reading increasingly strained. Third Turnings feature atomization and cynicism; they do not typically produce simultaneous major wars and structural energy shocks.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">04 / Key Signals</div>
+    <h2>Signal Breakdown</h2>
+    <div class="accent-line"></div>
+
+    <div class="signal-grid">
+
+      <div class="signal-card">
+        <div class="card-label">Economic</div>
+        <ul>
+          <li>Global growth has slowed below pre-pandemic averages, with the IMF projecting 3.1 percent in 2026, down from earlier forecasts</li>
+          <li>Inflation is rising again due to the Middle East energy shock, with headline inflation projected to reach 4.4 percent under IMF reference conditions</li>
+          <li>Public debt levels are historically high across advanced economies, with fiscal buffers already eroded</li>
+          <li>Oil prices have spiked sharply above one hundred dollars per barrel following disruption to the Strait of Hormuz</li>
+          <li>Cost-of-living pressure persists for lower-income households globally even as headline numbers ease</li>
+          <li>Trade barriers and tariff tensions are creating structural headwinds to investment and growth</li>
+        </ul>
+      </div>
+
+      <div class="signal-card">
+        <div class="card-label">Political</div>
+        <ul>
+          <li>The 2026 Edelman Trust Barometer finds 70 percent of respondents globally are hesitant or unwilling to trust people with different values or information sources</li>
+          <li>Streets-versus-elites narratives are intensifying across democratic societies, per the WEF Global Risks Report 2026</li>
+          <li>Institutional credibility of central banks and governments is described as eroding by the IMF</li>
+          <li>Populist and extremist movements are gaining ground in multiple democracies simultaneously</li>
+          <li>The US domestic environment remains sharply divided, with 2026 midterm elections adding further pressure</li>
+          <li>The multilateral system is under severe pressure from declining transparency and respect for rule of law</li>
+        </ul>
+      </div>
+
+      <div class="signal-card">
+        <div class="card-label">Social</div>
+        <ul>
+          <li>Only 39 percent of people globally say they regularly read sources with differing political views, down sharply year-over-year</li>
+          <li>Inequality remains a top-ranked interconnected global risk for the second consecutive year, per WEF</li>
+          <li>Generational economic stress is acute; housing, food, and energy costs have persistently eroded purchasing power for younger cohorts</li>
+          <li>Social trust has moved from polarization to grievance to insularity: a retreat from shared reality</li>
+          <li>65 percent of respondents worry about foreign actors inflaming domestic divisions through misinformation</li>
+        </ul>
+      </div>
+
+      <div class="signal-card">
+        <div class="card-label">Global</div>
+        <ul>
+          <li>Active high-intensity conflicts are tracked in over 30 countries, with the Middle East, Eastern Europe, and the African Sahel as the most severe theaters</li>
+          <li>The Ukraine war and the US-Israel-Iran confrontation have merged into a single interconnected crisis through weapons transfers and energy markets</li>
+          <li>Sudan ranks as the most likely conflict to escalate further in 2026, per the Council on Foreign Relations</li>
+          <li>Geoeconomic confrontation was selected as the top risk most likely to trigger a material global crisis in 2026 by WEF respondents</li>
+          <li>China's weaponization of rare earth controls is accelerating geopolitical fragmentation</li>
+          <li>Defense spending is rising sharply across Europe and Asia, with significant macroeconomic trade-offs</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">05 / Interpretation</div>
+    <h2>What the Evidence Points To</h2>
+    <div class="accent-line"></div>
+    <div class="interpretation-box">
+      <p>The balance of evidence supports Hypothesis A. The world is not merely under stress. It is experiencing a convergence of crises that fits the structural pattern of a Fourth Turning, or Crisis era, in the Strauss-Howe generational framework.</p>
+      <p>What makes this reading more credible than a late Third Turning interpretation is the simultaneity and interconnection of the crises. In previous unravelings, crises tended to be sequential and partially contained. What we see in 2026 is different: conflicts are merging across theaters, trust has broken down across multiple dimensions at once, fiscal space to absorb new shocks is depleted, and the international order that managed disputes for decades is visibly fracturing.</p>
+      <p>The Fourth Turning framework does not predict outcomes. It describes a type of era. What it says about Crisis periods is that old institutions will be challenged to their limits, that some will fail while new ones emerge, and that the resolution depends on choices made under pressure. None of that resolution is visible yet.</p>
+      <p>The counterpoint to watch is this: Fourth Turnings historically produce a powerful collective response that re-forges social cohesion. There are no clear signs of that yet. Societies are retreating inward, not gathering toward a shared purpose. That may be an early stage of the process, or it may indicate the Crisis has not yet reached its forcing moment.</p>
+      <p style="margin-bottom: 0;">This analysis does not make predictions. It maps where the evidence points, and it points clearly toward a world in, or very near, an active generational Crisis.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">06 / Forward Watch</div>
+    <h2>What to Watch: Next 6 to 12 Months</h2>
+    <div class="accent-line"></div>
+    <ul class="watch-list">
+      <li>Whether the US-Israel-Iran confrontation expands beyond its current gray-zone phase or moves toward diplomatic resolution in Geneva</li>
+      <li>Whether energy price shocks from the Strait of Hormuz disruption produce second-round inflation and force central banks back into tightening cycles</li>
+      <li>Whether long-term interest rates rise sharply in major economies as fiscal deficits widen and institutional credibility weakens</li>
+      <li>Whether the Ukraine conflict intensifies following the shift in US attention toward the Middle East</li>
+      <li>The November 2026 US midterm elections and their effect on domestic political stability and foreign policy direction</li>
+      <li>Whether Sudan escalates into a wider regional conflict drawing in additional state actors</li>
+      <li>Whether any major financial institution or sovereign debt market comes under acute stress as buffers thin further</li>
+      <li>Whether collective responses to shared threats begin to emerge, which would signal the turning is moving toward its eventual resolution phase</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-label">07 / Sources and References</div>
+    <h2>Sources</h2>
+    <div class="accent-line"></div>
+    <ul class="sources-list">
+      <li><a href="https://www.imf.org/en/publications/weo/issues/2026/04/14/world-economic-outlook-april-2026" target="_blank">IMF World Economic Outlook, April 2026: Global Economy in the Shadow of War</a></li>
+      <li><a href="https://www.imf.org" target="_blank">IMF Spring Meetings 2026 Press Briefing Transcripts</a></li>
+      <li><a href="https://unctad.org/publication/world-economic-situation-and-prospects-2026" target="_blank">UNCTAD World Economic Situation and Prospects 2026</a></li>
+      <li><a href="https://www.worldbank.org/en/publication/global-economic-prospects" target="_blank">World Bank Global Economic Prospects 2026</a></li>
+      <li><a href="https://www.edelman.com/news-awards/2026-edelman-trust-barometer-society-slides-into-insularity" target="_blank">Edelman Trust Barometer 2026</a></li>
+      <li><a href="https://www.weforum.org/publications/global-risks-report-2026" target="_blank">World Economic Forum Global Risks Report 2026</a></li>
+      <li><a href="https://www.cfr.org/reports/conflicts-watch-2026" target="_blank">Council on Foreign Relations: Conflicts to Watch in 2026</a></li>
+      <li><a href="https://www.reuters.com" target="_blank">Reuters</a></li>
+      <li><a href="https://www.bbc.com/news" target="_blank">BBC News</a></li>
+    </ul>
+
+    <div class="date-stamp">Analysis compiled: May 5, 2026 &nbsp;&mdash;&nbsp; All signals reflect publicly available reporting as of this date. This is an interpretive framework exercise, not a forecast.</div>
+  </section>
+
+</div>
+
+</body>
+</html>
